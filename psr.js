@@ -1,36 +1,18 @@
-let getHumanChoice = window.prompt("Choose one and enter your choice below! \nPaper, Scissors, Rock...","");
+const getHumanChoice = window.prompt("Choose one and enter your choice below! \nPaper, Scissors, Rock...","");
 
-const input = getHumanChoice;
+console.log(getHumanChoice);
 
-const choiceValue = {
-  "Paper": "Paper",
-  "Scissors": "Scissors",
-  "Rock": "Rock"
-};
+const getComputerChoice = Math.floor(Math.random() * 3) + 1;
 
-const playerChoice = choiceValue[input];
-
-console.log(`Player 1: ${playerChoice}`);
-
-function getComputerChoice(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+if (getComputerChoice === 1) {
+  console.log("Rock");
+} else if (getComputerChoice === 2) {
+  console.log("Paper");
+} else {
+  console.log("Scissors");
 }
-
-const min = 1;
-const max = 3;
-
-const randomNumber = getComputerChoice(min, max);
-
-const numberToString = {
-  1: "Paper",
-  2: "Scissors",
-  3: "Rock"
-};
-
-const stringValue = numberToString[randomNumber];
-
-console.log(`Computer: ${stringValue}`);
 
 var humanScore = 0;
 
 var computerScore = 0;
+
